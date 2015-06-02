@@ -97,7 +97,6 @@
 				<li><a href="class-Quaver.App.Controller.auth.html">Quaver\App\Controller\auth</a></li>
 				<li><a href="class-Quaver.App.Controller.e404.html">Quaver\App\Controller\e404</a></li>
 				<li><a href="class-Quaver.App.Controller.home.html">Quaver\App\Controller\home</a></li>
-				<li><a href="class-Quaver.App.Model.Mail.html">Quaver\App\Model\Mail</a></li>
 				<li><a href="class-Quaver.App.Model.User.html">Quaver\App\Model\User</a></li>
 				<li><a href="class-Quaver.Core.Bootstrap.html">Quaver\Core\Bootstrap</a></li>
 				<li><a href="class-Quaver.Core.Controller.html">Quaver\Core\Controller</a></li>
@@ -371,32 +370,33 @@
 </span><span id="238" class="l"><a href="#238">238 </a>                    <span class="php-keyword1">break</span>;
 </span><span id="239" class="l"><a href="#239">239 </a>            }
 </span><span id="240" class="l"><a href="#240">240 </a>        } <span class="php-keyword1">else</span> {
-</span><span id="241" class="l"><a href="#241">241 </a>            <span class="php-var">$newString</span> = <span class="php-keyword1">new</span> LangStrings();
-</span><span id="242" class="l"><a href="#242">242 </a>            <span class="php-var">$newString</span>-&gt;language = <span class="php-var">$this</span>-&gt;id;
-</span><span id="243" class="l"><a href="#243">243 </a>            <span class="php-var">$newString</span>-&gt;label = <span class="php-var">$_label</span>;
-</span><span id="244" class="l"><a href="#244">244 </a>            <span class="php-var">$newString</span>-&gt;text = <span class="php-quote">&quot;#</span><span class="php-var">$_label</span><span class="php-quote">#&quot;</span>;
-</span><span id="245" class="l"><a href="#245">245 </a>
-</span><span id="246" class="l"><a href="#246">246 </a>            <span class="php-keyword1">if</span> (<span class="php-var">$newString</span>-&gt;save()) {
-</span><span id="247" class="l"><a href="#247">247 </a>                <span class="php-var">$return</span> = <span class="php-quote">&quot;#</span><span class="php-var">$_label</span><span class="php-quote">#&quot;</span>;
-</span><span id="248" class="l"><a href="#248">248 </a>            }
-</span><span id="249" class="l"><a href="#249">249 </a>        }
-</span><span id="250" class="l"><a href="#250">250 </a>
-</span><span id="251" class="l"><a href="#251">251 </a>        <span class="php-keyword1">return</span> <span class="php-var">$return</span>;
-</span><span id="252" class="l"><a href="#252">252 </a>    }
-</span><span id="253" class="l"><a href="#253">253 </a>
-</span><span id="254" class="l"><a href="#254">254 </a>    <span class="php-comment">/**
-</span></span><span id="255" class="l"><a href="#255">255 </a><span class="php-comment">     * TypeFormat shortener.
-</span></span><span id="256" class="l"><a href="#256">256 </a><span class="php-comment">     *
-</span></span><span id="257" class="l"><a href="#257">257 </a><span class="php-comment">     * @param type $_label
-</span></span><span id="258" class="l"><a href="#258">258 </a><span class="php-comment">     *
-</span></span><span id="259" class="l"><a href="#259">259 </a><span class="php-comment">     * @return type
-</span></span><span id="260" class="l"><a href="#260">260 </a><span class="php-comment">     */</span>
-</span><span id="261" class="l"><a href="#261">261 </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> l(<span class="php-var">$_label</span>)
-</span><span id="262" class="l"><a href="#262">262 </a>    {
-</span><span id="263" class="l"><a href="#263">263 </a>        <span class="php-keyword1">return</span> <span class="php-var">$this</span>-&gt;typeFormat(<span class="php-var">$_label</span>, <span class="php-quote">'d'</span>);
-</span><span id="264" class="l"><a href="#264">264 </a>    }
-</span><span id="265" class="l"><a href="#265">265 </a>}
-</span><span id="266" class="l"><a href="#266">266 </a></span></code></pre>
+</span><span id="241" class="l"><a href="#241">241 </a>            <span class="php-var">$return</span> = <span class="php-quote">&quot;#</span><span class="php-var">$_label</span><span class="php-quote">#&quot;</span>;
+</span><span id="242" class="l"><a href="#242">242 </a>            <span class="php-var">$newString</span> = <span class="php-keyword1">new</span> LangStrings();
+</span><span id="243" class="l"><a href="#243">243 </a>            <span class="php-var">$newString</span>-&gt;language = <span class="php-var">$this</span>-&gt;id;
+</span><span id="244" class="l"><a href="#244">244 </a>            <span class="php-var">$newString</span>-&gt;label = <span class="php-var">$_label</span>;
+</span><span id="245" class="l"><a href="#245">245 </a>            <span class="php-var">$newString</span>-&gt;text = <span class="php-var">$return</span>;
+</span><span id="246" class="l"><a href="#246">246 </a>
+</span><span id="247" class="l"><a href="#247">247 </a>            <span class="php-keyword1">if</span> (<span class="php-var">$newString</span>-&gt;save()) {
+</span><span id="248" class="l"><a href="#248">248 </a>                <span class="php-var">$this</span>-&gt;strings[<span class="php-var">$_label</span>] = <span class="php-var">$return</span>;
+</span><span id="249" class="l"><a href="#249">249 </a>            }
+</span><span id="250" class="l"><a href="#250">250 </a>        }
+</span><span id="251" class="l"><a href="#251">251 </a>
+</span><span id="252" class="l"><a href="#252">252 </a>        <span class="php-keyword1">return</span> <span class="php-var">$return</span>;
+</span><span id="253" class="l"><a href="#253">253 </a>    }
+</span><span id="254" class="l"><a href="#254">254 </a>
+</span><span id="255" class="l"><a href="#255">255 </a>    <span class="php-comment">/**
+</span></span><span id="256" class="l"><a href="#256">256 </a><span class="php-comment">     * TypeFormat shortener.
+</span></span><span id="257" class="l"><a href="#257">257 </a><span class="php-comment">     *
+</span></span><span id="258" class="l"><a href="#258">258 </a><span class="php-comment">     * @param type $_label
+</span></span><span id="259" class="l"><a href="#259">259 </a><span class="php-comment">     *
+</span></span><span id="260" class="l"><a href="#260">260 </a><span class="php-comment">     * @return type
+</span></span><span id="261" class="l"><a href="#261">261 </a><span class="php-comment">     */</span>
+</span><span id="262" class="l"><a href="#262">262 </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> l(<span class="php-var">$_label</span>)
+</span><span id="263" class="l"><a href="#263">263 </a>    {
+</span><span id="264" class="l"><a href="#264">264 </a>        <span class="php-keyword1">return</span> <span class="php-var">$this</span>-&gt;typeFormat(<span class="php-var">$_label</span>, <span class="php-quote">'d'</span>);
+</span><span id="265" class="l"><a href="#265">265 </a>    }
+</span><span id="266" class="l"><a href="#266">266 </a>}
+</span><span id="267" class="l"><a href="#267">267 </a></span></code></pre>
 	</div>
 
 	<div id="footer">
@@ -404,6 +404,6 @@
 	</div>
 </div>
 <script src="resources/combined.js?533e23ef2f02bd4b20548834a028566b6eb403e0"></script>
-<script src="elementlist.js?80d1e3d693521c9d254a15ccf2376d42a22aeaec"></script>
+<script src="elementlist.js?352d8970e6793c8e905f8a2ea9c7306e4af31ceb"></script>
 </body>
 </html>

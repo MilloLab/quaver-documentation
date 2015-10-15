@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 
-	<title>Class Quaver\Core\Controller | Quaver Framework</title>
+	<title>Class Quaver\Core\App | Quaver Framework</title>
 
 	<link rel="stylesheet" href="resources/bootstrap.min.css?973e37a8502921d56bc02bb55321f45b072b6f71">
 	<link rel="stylesheet" href="resources/style.css?49f43d3208c5d7e33fa16d36107a345bf11cc00d">
@@ -73,9 +73,9 @@
 		<div id="elements">
 			<h3>Classes</h3>
 			<ul>
-				<li><a href="class-Quaver.Core.App.html">App</a></li>
+				<li class="active"><a href="class-Quaver.Core.App.html">App</a></li>
 				<li><a href="class-Quaver.Core.Config.html">Config</a></li>
-				<li class="active"><a href="class-Quaver.Core.Controller.html">Controller</a></li>
+				<li><a href="class-Quaver.Core.Controller.html">Controller</a></li>
 				<li><a href="class-Quaver.Core.DB.html">DB</a></li>
 				<li><a href="class-Quaver.Core.Helper.html">Helper</a></li>
 				<li><a href="class-Quaver.Core.Lang.html">Lang</a></li>
@@ -103,11 +103,11 @@
 <div id="right">
 	<div id="rightInner">
 <div id="content" class="class">
-	<h1>Class Controller</h1>
+	<h1>Class App</h1>
 
 
 	<div class="description">
-	<p>Controller base class</p>
+	<p>App</p>
 	</div>
 
 
@@ -119,12 +119,14 @@
 
 
 	<div class="alert alert-info">
-		<b>Abstract</b><br>
+		
 		
 		<b>Namespace:</b> <a href="namespace-Quaver.html">Quaver</a>\<a href="namespace-Quaver.Core.html">Core</a><br>
 		<b>Package:</b> Quaver<br>
 
-			<b>Located at</b> <a href="source-class-Quaver.Core.Controller.html#32-260" title="Go to source code">Core/Controller.php</a>
+				<b>Author:</b>
+				Alberto González<br>
+			<b>Located at</b> <a href="source-class-Quaver.Core.App.html#34-202" title="Go to source code">Core/App.php</a>
 		<br>
 	</div>
 
@@ -137,33 +139,24 @@
 
 			<td class="attributes"><code>
 				 public 
-				mixed
+				
 				
 				</code>
 			</td>
 
 			<td class="name"><div>
 			<a class="anchor" href="#___construct">#</a>
-			<code><a href="source-class-Quaver.Core.Controller.html#47-130" title="Go to source code">__construct</a>( <span>class <var>$router</var></span> )</code>
+			<code><a href="source-class-Quaver.Core.App.html#56-71" title="Go to source code">__construct</a>( )</code>
 
 			<div class="description short">
-				<p>Router constructor.</p>
+				<p>Constructor</p>
 			</div>
 
 			<div class="description detailed hidden">
-				<p>Router constructor.</p>
+				<p>Constructor</p>
 
 
-					<h4>Parameters</h4>
-					<div class="list"><dl>
-						<dt><var>$router</var></dt>
-						<dd></dd>
-					</dl></div>
 
-					<h4>Returns</h4>
-					<div class="list">
-						mixed
-					</div>
 
 
 
@@ -171,38 +164,40 @@
 			</div>
 			</div></td>
 		</tr>
-		<tr data-order="setView" id="_setView">
+		<tr data-order="addPath" id="_addPath">
 
 			<td class="attributes"><code>
 				 public 
-				mixed
+				array
 				
 				</code>
 			</td>
 
 			<td class="name"><div>
-			<a class="anchor" href="#_setView">#</a>
-			<code><a href="source-class-Quaver.Core.Controller.html#132-143" title="Go to source code">setView</a>( <span>string <var>$path</var></span>, <span>string <var>$extension</var> = <span class="php-quote">'twig'</span></span> )</code>
+			<a class="anchor" href="#_addPath">#</a>
+			<code><a href="source-class-Quaver.Core.App.html#73-85" title="Go to source code">addPath</a>( <span>string <var>$container</var></span>, <span>string <var>$path</var></span>, <span>boolean <var>$_moduleRoute</var> = <span class="php-keyword1">false</span></span> )</code>
 
 			<div class="description short">
-				<p>Asociate views to render.</p>
+				<p>Add new paths (YAML).</p>
 			</div>
 
 			<div class="description detailed hidden">
-				<p>Asociate views to render.</p>
+				<p>Add new paths (YAML).</p>
 
 
 					<h4>Parameters</h4>
 					<div class="list"><dl>
+						<dt><var>$container</var></dt>
+						<dd></dd>
 						<dt><var>$path</var></dt>
 						<dd></dd>
-						<dt><var>$extension</var></dt>
+						<dt><var>$_moduleRoute</var></dt>
 						<dd></dd>
 					</dl></div>
 
 					<h4>Returns</h4>
 					<div class="list">
-						mixed
+						array
 					</div>
 
 
@@ -211,31 +206,42 @@
 			</div>
 			</div></td>
 		</tr>
-		<tr data-order="render" id="_render">
+		<tr data-order="addModule" id="_addModule">
 
 			<td class="attributes"><code>
 				 public 
-				mixed
+				array
 				
 				</code>
 			</td>
 
 			<td class="name"><div>
-			<a class="anchor" href="#_render">#</a>
-			<code><a href="source-class-Quaver.Core.Controller.html#145-170" title="Go to source code">render</a>( )</code>
+			<a class="anchor" href="#_addModule">#</a>
+			<code><a href="source-class-Quaver.Core.App.html#87-100" title="Go to source code">addModule</a>( <span>string <var>$moduleName</var></span>, <span>string <var>$packageName</var></span>, <span>string <var>$modulePath</var> = <span class="php-quote">''</span></span>, <span>string <var>$moduleRoute</var> = <span class="php-quote">'/'</span></span> )</code>
 
 			<div class="description short">
-				<p>Render views.</p>
+				<p>Add modules to Quaver.</p>
 			</div>
 
 			<div class="description detailed hidden">
-				<p>Render views.</p>
+				<p>Add modules to Quaver.</p>
 
 
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$moduleName</var></dt>
+						<dd></dd>
+						<dt><var>$packageName</var></dt>
+						<dd></dd>
+						<dt><var>$modulePath</var></dt>
+						<dd></dd>
+						<dt><var>$moduleRoute</var></dt>
+						<dd></dd>
+					</dl></div>
 
 					<h4>Returns</h4>
 					<div class="list">
-						mixed
+						array
 					</div>
 
 
@@ -244,36 +250,7 @@
 			</div>
 			</div></td>
 		</tr>
-		<tr data-order="getGlobalTwigVars" id="_getGlobalTwigVars">
-
-			<td class="attributes"><code>
-				 protected 
-				
-				
-				</code>
-			</td>
-
-			<td class="name"><div>
-			<a class="anchor" href="#_getGlobalTwigVars">#</a>
-			<code><a href="source-class-Quaver.Core.Controller.html#172-234" title="Go to source code">getGlobalTwigVars</a>( )</code>
-
-			<div class="description short">
-				<p>Set main twig variables.</p>
-			</div>
-
-			<div class="description detailed hidden">
-				<p>Set main twig variables.</p>
-
-
-
-
-
-
-
-			</div>
-			</div></td>
-		</tr>
-		<tr data-order="addTwigVars" id="_addTwigVars">
+		<tr data-order="removeModule" id="_removeModule">
 
 			<td class="attributes"><code>
 				 public 
@@ -283,22 +260,20 @@
 			</td>
 
 			<td class="name"><div>
-			<a class="anchor" href="#_addTwigVars">#</a>
-			<code><a href="source-class-Quaver.Core.Controller.html#236-246" title="Go to source code">addTwigVars</a>( <span>string <var>$_key</var></span>, <span>array <var>$_array</var></span> )</code>
+			<a class="anchor" href="#_removeModule">#</a>
+			<code><a href="source-class-Quaver.Core.App.html#102-109" title="Go to source code">removeModule</a>( <span>string <var>$moduleName</var></span> )</code>
 
 			<div class="description short">
-				<p>Add vars to twig.</p>
+				<p>Remove module</p>
 			</div>
 
 			<div class="description detailed hidden">
-				<p>Add vars to twig.</p>
+				<p>Remove module</p>
 
 
 					<h4>Parameters</h4>
 					<div class="list"><dl>
-						<dt><var>$_key</var></dt>
-						<dd></dd>
-						<dt><var>$_array</var></dt>
+						<dt><var>$moduleName</var></dt>
 						<dd></dd>
 					</dl></div>
 
@@ -309,7 +284,40 @@
 			</div>
 			</div></td>
 		</tr>
-		<tr data-order="addQuaverTwigVars" id="_addQuaverTwigVars">
+		<tr data-order="modules" id="_modules">
+
+			<td class="attributes"><code>
+				 public 
+				object
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_modules">#</a>
+			<code><a href="source-class-Quaver.Core.App.html#111-117" title="Go to source code">modules</a>( )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						object
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="run" id="_run">
 
 			<td class="attributes"><code>
 				 public 
@@ -319,24 +327,17 @@
 			</td>
 
 			<td class="name"><div>
-			<a class="anchor" href="#_addQuaverTwigVars">#</a>
-			<code><a href="source-class-Quaver.Core.Controller.html#248-259" title="Go to source code">addQuaverTwigVars</a>( <span>string <var>$_key</var></span>, <span>array <var>$_array</var></span> )</code>
+			<a class="anchor" href="#_run">#</a>
+			<code><a href="source-class-Quaver.Core.App.html#119-189" title="Go to source code">run</a>( )</code>
 
 			<div class="description short">
-				<p>Extend qv object for twig.</p>
+				<p>Run instance.</p>
 			</div>
 
 			<div class="description detailed hidden">
-				<p>Extend qv object for twig.</p>
+				<p>Run instance.</p>
 
 
-					<h4>Parameters</h4>
-					<div class="list"><dl>
-						<dt><var>$_key</var></dt>
-						<dd></dd>
-						<dt><var>$_array</var></dt>
-						<dd></dd>
-					</dl></div>
 
 
 
@@ -355,6 +356,40 @@
 
 
 
+		<div class="panel panel-default">
+            <div class="panel-heading"><h2>Constants summary</h2></div>
+			<table class="summary table table-bordered table-striped constants" id="constants">
+			<tr data-order="VERSION" id="VERSION">
+
+				<td class="attributes"><code>string</code></td>
+				<td class="name">
+					<code>
+						<a href="source-class-Quaver.Core.App.html#41-44" title="Go to source code"><b>VERSION</b></a>
+					</code>
+
+					<div class="description short">
+						
+					</div>
+
+					<div class="description detailed hidden">
+						
+
+							<h4>Const</h4>
+							<div class="list">
+									string<br>
+							</div>
+					</div>
+				</td>
+				<td class="value">
+					<div>
+						<a href="#VERSION" class="anchor">#</a>
+						<code><span class="php-quote">'0.11'</span></code>
+					</div>
+				</td>
+			</tr>
+			</table>
+		</div>
+
 
 
 
@@ -364,11 +399,11 @@
 		<tr data-order="router" id="$router">
 			<td class="attributes"><code>
 				public  
-				
+				<code><a href="class-Quaver.Core.Router.html">Quaver\Core\Router</a></code>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Quaver.Core.Controller.html#38" title="Go to source code"><var>$router</var></a>
+					<a href="source-class-Quaver.Core.App.html#46-49" title="Go to source code"><var>$router</var></a>
 
 				<div class="description short">
 					
@@ -386,14 +421,14 @@
 				</div>
 			</td>
 		</tr>
-		<tr data-order="template" id="$template">
+		<tr data-order="modules" id="$modules">
 			<td class="attributes"><code>
 				public  
-				
+				<code><a href="class-Quaver.Core.Controller.html">Quaver\Core\Controller</a></code>
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Quaver.Core.Controller.html#41" title="Go to source code"><var>$template</var></a>
+					<a href="source-class-Quaver.Core.App.html#51-54" title="Go to source code"><var>$modules</var></a>
 
 				<div class="description short">
 					
@@ -406,108 +441,8 @@
 			</td>
 			<td class="value">
 				<div>
-					<a href="#$template" class="anchor">#</a>
+					<a href="#$modules" class="anchor">#</a>
 					<code></code>
-				</div>
-			</td>
-		</tr>
-		<tr data-order="twig" id="$twig">
-			<td class="attributes"><code>
-				public  
-				
-			</code></td>
-
-			<td class="name">
-					<a href="source-class-Quaver.Core.Controller.html#42" title="Go to source code"><var>$twig</var></a>
-
-				<div class="description short">
-					
-				</div>
-
-				<div class="description detailed hidden">
-					
-
-				</div>
-			</td>
-			<td class="value">
-				<div>
-					<a href="#$twig" class="anchor">#</a>
-					<code><span class="php-keyword1">null</span></code>
-				</div>
-			</td>
-		</tr>
-		<tr data-order="twigVars" id="$twigVars">
-			<td class="attributes"><code>
-				public  
-				array
-			</code></td>
-
-			<td class="name">
-					<a href="source-class-Quaver.Core.Controller.html#43" title="Go to source code"><var>$twigVars</var></a>
-
-				<div class="description short">
-					
-				</div>
-
-				<div class="description detailed hidden">
-					
-
-				</div>
-			</td>
-			<td class="value">
-				<div>
-					<a href="#$twigVars" class="anchor">#</a>
-					<code><span class="php-keyword1">array</span>()</code>
-				</div>
-			</td>
-		</tr>
-		<tr data-order="twigProfiler" id="$twigProfiler">
-			<td class="attributes"><code>
-				public  
-				
-			</code></td>
-
-			<td class="name">
-					<a href="source-class-Quaver.Core.Controller.html#44" title="Go to source code"><var>$twigProfiler</var></a>
-
-				<div class="description short">
-					
-				</div>
-
-				<div class="description detailed hidden">
-					
-
-				</div>
-			</td>
-			<td class="value">
-				<div>
-					<a href="#$twigProfiler" class="anchor">#</a>
-					<code></code>
-				</div>
-			</td>
-		</tr>
-		<tr data-order="configVars" id="$configVars">
-			<td class="attributes"><code>
-				public  
-				array
-			</code></td>
-
-			<td class="name">
-					<a href="source-class-Quaver.Core.Controller.html#45" title="Go to source code"><var>$configVars</var></a>
-
-				<div class="description short">
-					
-				</div>
-
-				<div class="description detailed hidden">
-					
-
-				</div>
-			</td>
-			<td class="value">
-				<div>
-					<a href="#$configVars" class="anchor">#</a>
-					<code><span class="php-keyword1">array</span>()</code>
 				</div>
 			</td>
 		</tr>

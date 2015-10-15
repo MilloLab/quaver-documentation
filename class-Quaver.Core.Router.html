@@ -73,7 +73,7 @@
 		<div id="elements">
 			<h3>Classes</h3>
 			<ul>
-				<li><a href="class-Quaver.Core.Bootstrap.html">Bootstrap</a></li>
+				<li><a href="class-Quaver.Core.App.html">App</a></li>
 				<li><a href="class-Quaver.Core.Config.html">Config</a></li>
 				<li><a href="class-Quaver.Core.Controller.html">Controller</a></li>
 				<li><a href="class-Quaver.Core.DB.html">DB</a></li>
@@ -107,7 +107,7 @@
 
 
 	<div class="description">
-	<p>Router class.</p>
+	<p>Router class</p>
 	</div>
 
 
@@ -122,9 +122,9 @@
 		
 		
 		<b>Namespace:</b> <a href="namespace-Quaver.html">Quaver</a>\<a href="namespace-Quaver.Core.html">Core</a><br>
-		
+		<b>Package:</b> Quaver<br>
 
-			<b>Located at</b> <a href="source-class-Quaver.Core.Router.html#16-454" title="Go to source code">Core/Router.php</a>
+			<b>Located at</b> <a href="source-class-Quaver.Core.Router.html#37-475" title="Go to source code">Core/Router.php</a>
 		<br>
 	</div>
 
@@ -144,7 +144,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#___construct">#</a>
-			<code><a href="source-class-Quaver.Core.Router.html#35-56" title="Go to source code">__construct</a>( )</code>
+			<code><a href="source-class-Quaver.Core.Router.html#56-77" title="Go to source code">__construct</a>( )</code>
 
 			<div class="description short">
 				<p>Router constructor.</p>
@@ -173,7 +173,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_route">#</a>
-			<code><a href="source-class-Quaver.Core.Router.html#58-72" title="Go to source code">route</a>( )</code>
+			<code><a href="source-class-Quaver.Core.Router.html#79-93" title="Go to source code">route</a>( )</code>
 
 			<div class="description short">
 				<p>Routing flow.</p>
@@ -206,7 +206,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_addPath">#</a>
-			<code><a href="source-class-Quaver.Core.Router.html#74-98" title="Go to source code">addPath</a>( <span>string <var>$container</var></span>, <span>string <var>$path</var></span>, <span>boolean <var>$_moduleRoute</var> = <span class="php-keyword1">false</span></span> )</code>
+			<code><a href="source-class-Quaver.Core.Router.html#95-119" title="Go to source code">addPath</a>( <span>string <var>$container</var></span>, <span>string <var>$path</var></span>, <span>boolean <var>$_moduleRoute</var> = <span class="php-keyword1">false</span></span> )</code>
 
 			<div class="description short">
 				<p>Add new paths (YAML).</p>
@@ -248,7 +248,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_addModule">#</a>
-			<code><a href="source-class-Quaver.Core.Router.html#100-138" title="Go to source code">addModule</a>( <span>string <var>$moduleName</var></span>, <span>string <var>$packageName</var></span>, <span>string <var>$modulePath</var> = <span class="php-quote">''</span></span>, <span>string <var>$moduleRoute</var> = <span class="php-quote">'/'</span></span> )</code>
+			<code><a href="source-class-Quaver.Core.Router.html#121-159" title="Go to source code">addModule</a>( <span>string <var>$moduleName</var></span>, <span>string <var>$packageName</var></span>, <span>string <var>$modulePath</var> = <span class="php-quote">''</span></span>, <span>string <var>$moduleRoute</var> = <span class="php-quote">'/'</span></span> )</code>
 
 			<div class="description short">
 				<p>Add modules to Quaver.</p>
@@ -292,7 +292,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_removeModule">#</a>
-			<code><a href="source-class-Quaver.Core.Router.html#140-147" title="Go to source code">removeModule</a>( <span>string <var>$moduleName</var></span> )</code>
+			<code><a href="source-class-Quaver.Core.Router.html#161-168" title="Go to source code">removeModule</a>( <span>string <var>$moduleName</var></span> )</code>
 
 			<div class="description short">
 				<p>Remove module</p>
@@ -326,7 +326,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getUrlPart">#</a>
-			<code><a href="source-class-Quaver.Core.Router.html#149-163" title="Go to source code">getUrlPart</a>( <span>integer <var>$position</var></span> )</code>
+			<code><a href="source-class-Quaver.Core.Router.html#170-184" title="Go to source code">getUrlPart</a>( <span>integer <var>$position</var></span> )</code>
 
 			<div class="description short">
 				<p>Get actual URI.</p>
@@ -364,7 +364,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getCurrentURL">#</a>
-			<code><a href="source-class-Quaver.Core.Router.html#165-192" title="Go to source code">getCurrentURL</a>( <span>integer <var>$position</var> = <span class="php-num">0</span></span> )</code>
+			<code><a href="source-class-Quaver.Core.Router.html#186-213" title="Go to source code">getCurrentURL</a>( <span>integer <var>$position</var> = <span class="php-num">0</span></span> )</code>
 
 			<div class="description short">
 				<p>Get current URL/URI.</p>
@@ -402,7 +402,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getCurrentRoute">#</a>
-			<code><a href="source-class-Quaver.Core.Router.html#194-208" title="Go to source code">getCurrentRoute</a>( )</code>
+			<code><a href="source-class-Quaver.Core.Router.html#215-229" title="Go to source code">getCurrentRoute</a>( )</code>
 
 			<div class="description short">
 				<p>Get current action to route.</p>
@@ -435,7 +435,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_fixTrailingSlash">#</a>
-			<code><a href="source-class-Quaver.Core.Router.html#210-223" title="Go to source code">fixTrailingSlash</a>( <span>string <var>$_url</var></span> )</code>
+			<code><a href="source-class-Quaver.Core.Router.html#231-244" title="Go to source code">fixTrailingSlash</a>( <span>string <var>$_url</var></span> )</code>
 
 			<div class="description short">
 				<p>Fix trailing slash.</p>
@@ -473,7 +473,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_removeSlash">#</a>
-			<code><a href="source-class-Quaver.Core.Router.html#225-237" title="Go to source code">removeSlash</a>( <span>string <var>$_url</var></span> )</code>
+			<code><a href="source-class-Quaver.Core.Router.html#246-258" title="Go to source code">removeSlash</a>( <span>string <var>$_url</var></span> )</code>
 
 			<div class="description short">
 				<p>Remove slash.</p>
@@ -511,7 +511,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getController">#</a>
-			<code><a href="source-class-Quaver.Core.Router.html#239-284" title="Go to source code">getController</a>( <span>string <var>$_url</var></span> )</code>
+			<code><a href="source-class-Quaver.Core.Router.html#260-305" title="Go to source code">getController</a>( <span>string <var>$_url</var></span> )</code>
 
 			<div class="description short">
 				<p>Get asociate controller.</p>
@@ -549,7 +549,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getFirstPath">#</a>
-			<code><a href="source-class-Quaver.Core.Router.html#286-297" title="Go to source code">getFirstPath</a>( <span>string <var>$path</var></span> )</code>
+			<code><a href="source-class-Quaver.Core.Router.html#307-318" title="Go to source code">getFirstPath</a>( <span>string <var>$path</var></span> )</code>
 
 			<div class="description short">
 				<p>Get first path</p>
@@ -587,7 +587,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getBasePath">#</a>
-			<code><a href="source-class-Quaver.Core.Router.html#299-310" title="Go to source code">getBasePath</a>( <span>string <var>$path</var></span> )</code>
+			<code><a href="source-class-Quaver.Core.Router.html#320-331" title="Go to source code">getBasePath</a>( <span>string <var>$path</var></span> )</code>
 
 			<div class="description short">
 				<p>Get base path</p>
@@ -625,7 +625,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_dispatch">#</a>
-			<code><a href="source-class-Quaver.Core.Router.html#312-371" title="Go to source code">dispatch</a>( <span>array <var>$controller</var></span> )</code>
+			<code><a href="source-class-Quaver.Core.Router.html#333-392" title="Go to source code">dispatch</a>( <span>array <var>$controller</var></span> )</code>
 
 			<div class="description short">
 				<p>Dispatch action.</p>
@@ -663,7 +663,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_setControllerData">#</a>
-			<code><a href="source-class-Quaver.Core.Router.html#373-412" title="Go to source code">setControllerData</a>( <span>array <var>$controller</var></span> )</code>
+			<code><a href="source-class-Quaver.Core.Router.html#394-433" title="Go to source code">setControllerData</a>( <span>array <var>$controller</var></span> )</code>
 
 			<div class="description short">
 				<p>Set all info to manage controller dispatch.</p>
@@ -701,7 +701,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getQueryString">#</a>
-			<code><a href="source-class-Quaver.Core.Router.html#414-424" title="Go to source code">getQueryString</a>( )</code>
+			<code><a href="source-class-Quaver.Core.Router.html#435-445" title="Go to source code">getQueryString</a>( )</code>
 
 			<div class="description short">
 				<p>Get query string from URI.</p>
@@ -730,7 +730,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_startBenchProcess">#</a>
-			<code><a href="source-class-Quaver.Core.Router.html#426-439" title="Go to source code">startBenchProcess</a>( <span>boolean <var>$set</var> = <span class="php-keyword1">true</span></span> )</code>
+			<code><a href="source-class-Quaver.Core.Router.html#447-460" title="Go to source code">startBenchProcess</a>( <span>boolean <var>$set</var> = <span class="php-keyword1">true</span></span> )</code>
 
 			<div class="description short">
 				<p>Start benchmarking.</p>
@@ -768,7 +768,7 @@
 
 			<td class="name"><div>
 			<a class="anchor" href="#_finishBenchProcess">#</a>
-			<code><a href="source-class-Quaver.Core.Router.html#441-453" title="Go to source code">finishBenchProcess</a>( )</code>
+			<code><a href="source-class-Quaver.Core.Router.html#462-474" title="Go to source code">finishBenchProcess</a>( )</code>
 
 			<div class="description short">
 				<p>Finish benchmarking.</p>
@@ -806,31 +806,6 @@
 		<div class="panel panel-default">
             <div class="panel-heading"><h2>Properties summary</h2></div>
 			<table class="summary table table-bordered table-striped properties" id="properties">
-		<tr data-order="version" id="$version">
-			<td class="attributes"><code>
-				public  
-				string
-			</code></td>
-
-			<td class="name">
-					<a href="source-class-Quaver.Core.Router.html#21" title="Go to source code"><var>$version</var></a>
-
-				<div class="description short">
-					
-				</div>
-
-				<div class="description detailed hidden">
-					
-
-				</div>
-			</td>
-			<td class="value">
-				<div>
-					<a href="#$version" class="anchor">#</a>
-					<code><span class="php-quote">'0.10'</span></code>
-				</div>
-			</td>
-		</tr>
 		<tr data-order="routes" id="$routes">
 			<td class="attributes"><code>
 				public  
@@ -838,7 +813,7 @@
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Quaver.Core.Router.html#22" title="Go to source code"><var>$routes</var></a>
+					<a href="source-class-Quaver.Core.Router.html#43" title="Go to source code"><var>$routes</var></a>
 
 				<div class="description short">
 					
@@ -863,7 +838,7 @@
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Quaver.Core.Router.html#23" title="Go to source code"><var>$modules</var></a>
+					<a href="source-class-Quaver.Core.Router.html#44" title="Go to source code"><var>$modules</var></a>
 
 				<div class="description short">
 					
@@ -888,7 +863,7 @@
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Quaver.Core.Router.html#26" title="Go to source code"><var>$language</var></a>
+					<a href="source-class-Quaver.Core.Router.html#47" title="Go to source code"><var>$language</var></a>
 
 				<div class="description short">
 					
@@ -913,7 +888,7 @@
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Quaver.Core.Router.html#29" title="Go to source code"><var>$url</var></a>
+					<a href="source-class-Quaver.Core.Router.html#50" title="Go to source code"><var>$url</var></a>
 
 				<div class="description short">
 					
@@ -938,7 +913,7 @@
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Quaver.Core.Router.html#30" title="Go to source code"><var>$queryString</var></a>
+					<a href="source-class-Quaver.Core.Router.html#51" title="Go to source code"><var>$queryString</var></a>
 
 				<div class="description short">
 					
@@ -963,7 +938,7 @@
 			</code></td>
 
 			<td class="name">
-					<a href="source-class-Quaver.Core.Router.html#33" title="Go to source code"><var>$dev</var></a>
+					<a href="source-class-Quaver.Core.Router.html#54" title="Go to source code"><var>$dev</var></a>
 
 				<div class="description short">
 					
